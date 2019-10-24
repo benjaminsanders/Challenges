@@ -1,0 +1,50 @@
+body { 
+	visibility: hidden; 
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+.text1 {
+	font-size: 48px;
+	line-height: 1.3;
+}
+
+.text2 {
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+.text3 {
+	font-size: 24px;
+	line-height: 1.1;
+}
+
+.text4 {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.text5 {
+	font-size: 10px;
+	line-height: 0.75;
+}
+
+.text6 {
+	font-size: 8px;
+	line-height: 0.5;
+}
+
+.img-full {
+	height: auto !important;
+	width: auto !important;
+	margin-top: 10px;
+}
+
+html {
+	overflow-x: hidden !important;
+}
