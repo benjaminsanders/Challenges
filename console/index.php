@@ -1,3 +1,5 @@
+<?php include_once('../assets/func/main.php'); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,37 +50,25 @@
 <div class="container-fluid">
 	<h1>&nbsp;<br>&nbsp;</h1>
       <!-- Main hero unit for a primary marketing message or call to action -->
-    <div class="hero-unit">
-	  <div class="tab-content">
-		  <div class="tab-pane active" id="home">
-			<a href="">00 Name Generator</a><br>
-			<a href="">01 Higher-Lower/Heads-Tails</a><br>
-			<a href="">02 Temperature Converter</a><br>
-			<a href="">03 Calculate Age in Seconds</a><br>
-			<a href="">04 Encrypt/Decrypt Algorithm</a><br>
-			<a href="">05 Fizzbuzz</a><br>
-			<a href="">06 Rock-Paper-Scissors</a><br>
-			<a href="">07 Hangman</a><br>
-			<a href="">08 Love Calculator</a><br>
-			<a href="">09 Pseudorandom Sentence Gen</a><br>
-			<a href="">10 Password Generator</a><br>
-			<a href="">11 Atomically Correct Time</a><br>
-			<a href="">12 Haiku Generator</a><br>
-			<a href="">13 Magic Eight Ball</a><br>
-			<a href="">14 Collatz Conjecture</a><br>
-			<a href="">15 Reverse a String</a><br>
-			<a href="">16 Simple File Explorer</a><br>
-			<a href="">17 Count Words in a String</a><br>
-			<a href="">18 Minesweeper</a><br>
-			<a href="">19 Connect Four</a><br>
-			<a href="">20 BMI Calculator</a><br>
-			<a href="">21 4Chan Thread Downloader</a><br>
-			<a href="">22 Sudoku Generator/Solver</a><br>
-			<a href="">23 Maze Generator/Solver</a><br>
-			<a href="">24 Decimal/Binary Converter</a></div>
-		  <div class="tab-pane" id="profile">B</div>
-	    <div class="tab-pane" id="messages">C</div>
-		  <div class="tab-pane" id="settings">D</div>
+    <div class="row">
+		<div class="span7">
+			<div class="hero-unit text-center">
+				<h0>100 Pro/g/ramming Challenges</h0>
+			</div>
+		</div>
+	  	<div class="span5 tab-content">
+		  	<div class="tab-pane active hero-unit" id="home">
+			<?php getChallenge(0,24); ?>
+			</div>
+		  	<div class="tab-pane hero-unit" id="profile">
+			<?php getChallenge(25,49); ?>
+			</div>
+    	  <div class="tab-pane hero-unit" id="messages">
+			<?php getChallenge(50,74); ?>
+			</div>
+	  	  <div class="tab-pane hero-unit" id="settings">
+			<?php getChallenge(75,99); ?>
+			</div>
 		</div>
 	</div>
       
