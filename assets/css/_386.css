@@ -5896,6 +5896,23 @@ a.badge:focus {
   text-align: center;
 }
 
+.hero-unit-warning h0 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-unit-danger h0 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-align: center;
+}
+
+
 .hero-unit li {
   line-height: 20px;
 }

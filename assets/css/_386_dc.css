@@ -35,6 +35,11 @@ footer {
 }
 
 .text6 {
+	font-size: 9px;
+	line-height: 0.5;
+}
+
+.text7 {
 	font-size: 8px;
 	line-height: 0.5;
 }
