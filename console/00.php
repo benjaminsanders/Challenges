@@ -1,3 +1,63 @@
+<?php
+//Check if post is set
+if(isset($_GET)){
+	$gender = 0;
+	$novelty = 0;
+	$castle = 0;
+	
+	if(isset($_GET['gender'])){
+		if($_GET['gender'] == "F"){$gender = 1;}
+	}
+	
+	if(isset($_GET['novelty'])){
+		if($_GET['novelty'] == "TRUE"){$novelty = 1;}
+	}
+	
+	if(isset($_GET['castle'])){
+		if($_GET['castle'] == 1){$castle = 1;}
+	}
+	
+	//generate random selection
+	if($gender==1){
+	$fVal = rand(129002,258000);
+	}else{
+	$fVal = rand(1,129000);	
+	}
+	$sVal = rand(1,999);
+	
+	$nameData = getName($fVal);
+	
+ 
+	$lines = file('../assets/data/00/surnameData.csv');
+	$row = $lines[$sVal];
+	$surnameData = str_getcsv($row); // Parse line to CSV
+ 
+	
+	$genderTitle = array("MR.","MRS.");
+	$output = $genderTitle[$gender] . " " . strtoupper($nameData[1]) . " " . $surnameData[0];
+	$data = "Enable Novelty Mode For More Data";
+	
+	if($novelty == 1){
+		
+	$streetName = getName(rand(0,258000));
+		
+	$street = array("Road","Street","Drive","Alley","Avenue","Highway","Bypass","Acres","Turnaround");
+	$data = rand(100,9999) . " " . $streetName[1] . " " . $street[rand(0,8)] . "<br>Likely Year Of Birth: " . $nameData[0] . "<br>Chance Of Occurance : " . $nameData[2]*100 . "%";
+	}
+	
+	
+	
+}
+
+function getName($fVal){
+	$lines = file('../assets/data/00/nameData.csv');
+	$row = $lines[$fVal];
+	$nameData = str_getcsv($row); // Parse line to CSV
+	return $nameData;
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,10 +107,6 @@
 					  <input type="checkbox" name="novelty" id="novelty" value="TRUE" <?php if(isset($_GET['novelty'])){echo " checked";}?>>
 					  NOVELTY MODE
 					</label>
-					<label class="checkbox">
-					  <input type="checkbox" name="castle" id="castle" value="TRUE" <?php if(isset($_GET['castle'])){echo " checked";}?>>
-					  MEDIVAL MODE
-					</label>
 					  <hr><br>
 					<button type="submit" class="btn btn-block btn-large">GENERATE</button>
 				  </fieldset>
@@ -59,7 +115,8 @@
 		</div>
 		<div class="span9">
 			<div class="hero-unit-danger">
-				
+				<p class="text1 text-center"><?=$output;?></p><br>
+				<p class="text2"><?=$data;?></p>
 			</div>
 		</div>
 	</div>

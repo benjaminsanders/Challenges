@@ -8,7 +8,7 @@
             <ul class="nav">
 				<li class="divider-vertical"></li>
 			  	<li class="">
-               	 	<a href="#">Help</a>
+               	 	<a href="./index.php">Home</a>
               	</li>
             </ul>
           </div>
