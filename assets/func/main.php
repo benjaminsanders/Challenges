@@ -116,7 +116,7 @@ function getChallenge($start, $end){
 			$output = $output . '<a href="./' . sprintf('%02d',$i) . '.php"' . $exist . '>' . sprintf('%02d',$i) . ' ☑ ' . trim($text[$i]) . '</a><br>
 ';
 		}else{
-			$output = $output . '<a href="./nope.php?chal=' . $i . '">' . sprintf('%02d',$i) . ' ☒ ' . trim($text[$i]) . '</a><br>
+			$output = $output . sprintf('%02d',$i) . ' ☒ ' . trim($text[$i]) . '<br>
 ';
 		}
 		

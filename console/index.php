@@ -33,24 +33,20 @@
 				<p class="text6"><?php getBlockChart(); ?></p>
 			</div>
 			<div class="hero-unit-warning text-center">
-				<h0>CHALLENGE LIST SELECTION</h0><br>
-				<a href="#00" data-toggle="tab"><span class="badge badge-warning"><h0>00-24</h0></span></a>
-				<a href="#25" data-toggle="tab"><span class="badge badge-warning"><h0>25-49</h0></span></a>
-				<a href="#50" data-toggle="tab"><span class="badge badge-warning"><h0>50-74</h0></span></a>
-				<a href="#75" data-toggle="tab"><span class="badge badge-warning"><h0>75-99</h0></span></a>
 			</div>
 			<div class="hero-unit-danger text-center">
-				<h0>Reserved Area Bravo</h0>
 			</div>
 		</div>
 	  	<div class="span5">
-			<div class="hero-unit tab-content">
+			<div class="tab-content">
 				<hr>
-				<a href="#00" data-toggle="tab" class="h4">00-19</a>|
-				<a href="#20" data-toggle="tab" class="h4">20-39</a>|
-				<a href="#40" data-toggle="tab" class="h4">40-59</a>|
-				<a href="#60" data-toggle="tab" class="h4">60-79</a>|
-				<a href="#80" data-toggle="tab" class="h4">80-99</a> 
+				<div class="text-center">
+				<a href="#00" data-toggle="tab" class="h4">00-19</a> |
+				<a href="#20" data-toggle="tab" class="h4">20-39</a> |
+				<a href="#40" data-toggle="tab" class="h4">40-59</a> |
+				<a href="#60" data-toggle="tab" class="h4">60-79</a> |
+				<a href="#80" data-toggle="tab" class="h4">80-99</a>
+				</div>
 				<hr>
 				<div class="tab-pane active " id="00">
 				<?php getChallenge(0,19); ?>
@@ -67,6 +63,7 @@
 			  <div class="tab-pane" id="80">
 				<?php getChallenge(80,99); ?>
 				</div>
+				<hr>
 			</div>																				
 		</div>
 	</div>
